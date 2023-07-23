@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Questionnaire</title>
+</head>
+<body>
+  <h1>Customer Questionnaire</h1>
+  <form id="questionnaireForm">
+    <label for="customerName">Q1 Customer Name:</label>
+    <input type="text" id="customerName" required><br>
+
+    <label for="customerNumber">Q2 Customer Number:</label>
+    <input type="text" id="customerNumber" required><br>
+
+    <label for="highRiskCountry">Q3 High Risk Country Name:</label>
+    <input type="text" id="highRiskCountry" required><br>
+
+    <label for="hasAdditionalProfiles">Q4 Does customer have additional Profiles:</label>
+    <select id="hasAdditionalProfiles" onchange="showAdditionalProfilesFields()">
+      <option value=""> </option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select><br>
+
+    <div id="additionalProfilesFields" style="display:none;">
+      <h3>Additional Profiles Information:</h3>
+      <label for="profileName">Sub Q1 Additional Profile Name:</label>
+      <input type="text" id="profileName"><br>
+
+      <label for="profileNumber">Sub Q2 Additional Profile Number:</label>
+      <input type="text" id="profileNumber"><br>
+
+      <label for="businessUnit">Sub Q3 Additional Profile Business Unit:</label>
+      <input type="text" id="businessUnit"><br>
+    </div>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <p id="resultParagraph" style="display:none;"></p>
+
+  <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
